@@ -36,11 +36,11 @@ function draw() {
   const highMid = fft.getEnergy("highMid");
   const treble = fft.getEnergy("treble");
 
-  const bassHeight = map(bass, 0, 255, 0, height);
-  const lowMidHeight = map(lowMid, 0, 255, 0, height);
-  const midHeight = map(mid, 0, 255, 0, height);
-  const highMidHeight = map(highMid, 0, 255, 0, height);
-  const trebleHeight = map(treble, 0, 255, 0, height);
+  const bassHeight = map(bass, 0, 255, 10, height);
+  const lowMidHeight = map(lowMid, 0, 255, 10, height);
+  const midHeight = map(mid, 0, 255, 10, height);
+  const highMidHeight = map(highMid, 0, 255, 10, height);
+  const trebleHeight = map(treble, 0, 255, 10, height);
 
   const bassRectangle = () => {
     fill(bass, 0, 155);
