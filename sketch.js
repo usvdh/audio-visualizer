@@ -11,13 +11,14 @@ function setup() {
   fft = new p5.FFT();
   fft.setInput(song);
 
-  button = createButton("play");
+  button = createButton(`<i class="fas fa-play"></i>`);
   button.mousePressed(togglePlaying);
+  button.addClass("btn");
 }
 
 function togglePlaying() {
   if (song.isPlaying()) {
-    button.html("play");
+    button.html(`play`);
     song.stop();
   } else {
     button.html("stop");
