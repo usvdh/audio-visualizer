@@ -43,19 +43,24 @@ function draw() {
   const trebleHeight = map(treble, 0, 255, 0, height);
 
   const bassRectangle = () => {
-    rect((width / 2) - 115, height - bassHeight, 30, bassHeight, 5);
+    fill(bass, 0, 155);
+    rect(width / 2 - 115, height - bassHeight, 30, bassHeight, 5);
   };
   const lowMidRectangle = () => {
-    rect((width / 2) - 65, height - lowMidHeight, 30, lowMidHeight, 5);
+    fill(lowMid, 0, 155);
+    rect(width / 2 - 65, height - lowMidHeight, 30, lowMidHeight, 5);
   };
   const midRectangle = () => {
-    rect((width / 2) - 15, height - midHeight, 30, midHeight, 5);
+    fill(mid, 0, 155);
+    rect(width / 2 - 15, height - midHeight, 30, midHeight, 5);
   };
   const highMidRectangle = () => {
-    rect((width / 2) + 35, height - highMidHeight, 30, highMidHeight, 5);
+    fill(highMid, 0, 155);
+    rect(width / 2 + 35, height - highMidHeight, 30, highMidHeight, 5);
   };
   const trebleRectangle = () => {
-    rect((width / 2) + 85, height - trebleHeight, 30, trebleHeight, 5);
+    fill(treble, 0, 155);
+    rect(width / 2 + 85, height - trebleHeight, 30, trebleHeight, 5);
   };
 
   bassRectangle();
