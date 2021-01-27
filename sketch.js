@@ -18,10 +18,10 @@ function setup() {
 
 function togglePlaying() {
   if (song.isPlaying()) {
-    button.html(`play`);
+    button.html(`<i class="fas fa-play"></i>`);
     song.stop();
   } else {
-    button.html("stop");
+    button.html(`<i class="fas fa-stop"></i>`);
     song.play();
   }
 }
