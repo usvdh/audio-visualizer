@@ -12,8 +12,9 @@ function setup() {
 
   playButton = createButton(`<i class="fas fa-play"></i>`);
   playButton.mousePressed(togglePlaying);
-  playButton.addClass("btn");
+  playButton.addClass("play-btn");
   uploadButton = createFileInput(upload);
+  uploadButton.addClass("upload-btn")
 }
 
 function upload(data) {
