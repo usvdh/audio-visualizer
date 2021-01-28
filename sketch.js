@@ -1,5 +1,5 @@
 let song, analyzer, fft;
-let button;
+let playButton, uploadButton, uploadedSong, selectedSong;
 
 function preload() {
   song = loadSound("song.mp3");
@@ -9,21 +9,34 @@ function setup() {
   createCanvas(windowWidth, windowHeight / 2);
 
   fft = new p5.FFT();
-  fft.setInput(song);
 
-  button = createButton(`<i class="fas fa-play"></i>`);
-  button.mousePressed(togglePlaying);
-  button.addClass("btn");
+  playButton = createButton(`<i class="fas fa-play"></i>`);
+  playButton.mousePressed(togglePlaying);
+  playButton.addClass("play-btn");
+  uploadButton = createFileInput(upload);
+  uploadButton.addClass("upload-btn")
+}
+
+function upload(data) {
+  uploadedSong = loadSound(data.data);
 }
 
 function togglePlaying() {
-  if (song.isPlaying()) {
-    button.html(`<i class="fas fa-play"></i>`);
-    song.stop();
+  if (uploadedSong) selectedSong = uploadedSong;
+  else selectedSong = song;
+
+  if (selectedSong.isPlaying()) {
+    playButton.html(`<i class="fas fa-play"></i>`);
+    selectedSong.stop();
   } else {
-    button.html(`<i class="fas fa-stop"></i>`);
-    song.play();
+    playButton.html(`<i class="fas fa-stop"></i>`);
+    selectedSong.play();
   }
+}
+
+function setFftInput() {
+  if (uploadedSong) fft.setInput(uploadedSong);
+  else fft.setInput(song);
 }
 
 function draw() {
