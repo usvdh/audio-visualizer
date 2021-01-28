@@ -12,7 +12,6 @@ You will need to run the website on a [local server][https://github.com/processi
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 By default, the audio-visualizer will play and visualize the song [Wanderlust by Jim Hall][https://www.freemusicarchive.org/music/jim-hall/synth-kid-elsewhere/wanderlust]. For further enjoyment, you can upload your own songs using the upload button on the top left.
 
 ## Meta
