@@ -1,5 +1,5 @@
 let song, analyzer, fft;
-let button;
+let playButton;
 
 function preload() {
   song = loadSound("song.mp3");
@@ -11,17 +11,17 @@ function setup() {
   fft = new p5.FFT();
   fft.setInput(song);
 
-  button = createButton(`<i class="fas fa-play"></i>`);
-  button.mousePressed(togglePlaying);
-  button.addClass("btn");
+  playButton = createButton(`<i class="fas fa-play"></i>`);
+  playButton.mousePressed(togglePlaying);
+  playButton.addClass("btn");
 }
 
 function togglePlaying() {
   if (song.isPlaying()) {
-    button.html(`<i class="fas fa-play"></i>`);
+    playButton.html(`<i class="fas fa-play"></i>`);
     song.stop();
   } else {
-    button.html(`<i class="fas fa-stop"></i>`);
+    playButton.html(`<i class="fas fa-stop"></i>`);
     song.play();
   }
 }
