@@ -4,15 +4,15 @@ A very simple audio-visualizer made for the webbrowser using p5.js
 
 ![](header.png)
 
-# [Live demo][https://usvdh.github.io/audio-visualizer/]
+# [Live demo](https://usvdh.github.io/audio-visualizer/)
 
 ## Requirements
 
-You will need to run the website on a [local server][https://github.com/processing/p5.js/wiki/Local-server].
+You will need to run the website on a [local server](https://github.com/processing/p5.js/wiki/Local-server).
 
 ## Usage example
 
-By default, the audio-visualizer will play and visualize the song [Wanderlust by Jim Hall][https://www.freemusicarchive.org/music/jim-hall/synth-kid-elsewhere/wanderlust]. For further enjoyment, you can upload your own songs using the upload button on the top left.
+By default, the audio-visualizer will play and visualize the song [Wanderlust by Jim Hall](https://www.freemusicarchive.org/music/jim-hall/synth-kid-elsewhere/wanderlust). For further enjoyment, you can upload your own songs using the upload button on the top left.
 
 ## Meta
 
